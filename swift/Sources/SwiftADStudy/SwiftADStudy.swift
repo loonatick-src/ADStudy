@@ -5,38 +5,6 @@
 import Foundation
 import _Differentiation
 
-// @derivative(of: sin)
-// public func dsin(_ x: Float) -> (value: Float,
-//                                  differential: (Float) -> Float) {
-//     let c = cos(x)
-//     return (
-//         value: c,
-//         differential: { v in v * c }
-//     )
-// }
-
-// @derivative(of: cos)
-// @usableFromInline
-// func dcos(_ x: Float) -> (value: Float,
-//                           differential: (Float) -> Float) {
-//     let s = -sin(x)
-//     return (
-//         value: s,
-//         differential: { $0 * s }
-//     )
-// }
-
-// @derivative(of: tan)
-// @usableFromInline
-// func dtan(_ x: Float) -> (value: Float, differential: (Float) -> Float) {
-//     let secx = 1/cos(x)
-//     let s = secx * secx
-//     return (
-//         value: s,
-//         differential: { $0 * s }
-//     )
-// }
-
 @differentiable(reverse)
 func numToNum_1(_ x: Float) -> Float {
     let sinsq_x = sin(x) * sin(x)

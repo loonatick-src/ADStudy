@@ -1,7 +1,7 @@
 import XCTest
 import _Differentiation
-import RealModule
 @testable import SwiftADStudy
+import Foundation
 
 
     // TODO: refactor tests for better failure reporting. Consult https://developer.apple.com/documentation/xctest
@@ -17,5 +17,13 @@ final class SwiftADStudyTests: XCTestCase {
             }
         }
         // XCTAssertEqual(sin(Float.pi), Float.sin(Float.pi), accuracy: abstol)
+    }
+
+    func testNumericFunctionsNumerics() throws {
+        let abstol = 1.0e-6
+        let testCaseInputs: [Double] = [1, 2, 3, Double.pi, Double.pi/2]
+        for input in testCaseInputs {
+            XCTAssertEqual(SwiftADStudy.sin(input), Foundation.sin(input), accuracy: abstol)
+        }
     }
 }
