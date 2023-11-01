@@ -1,0 +1,3 @@
+module JuliaADStudy
+
+end # module
